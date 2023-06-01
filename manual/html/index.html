@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to PeleLMeX’s documentation! &mdash; PeleLMeX 22.12 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -28,12 +28,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="#" class="icon icon-home"> PeleLMeX
-            <img src="_static/swirlH2Fast_OH_vort_256.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="#" class="icon icon-home">
+            PeleLMeX
+              <img src="_static/swirlH2Fast_OH_vort_256.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -42,6 +46,7 @@
               <p class="caption" role="heading"><span class="caption-text">Theory:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Model.html">The <cite>PeleLMeX</cite> Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Implementation.html">Source code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Validation.html">PeleLMeX Verification &amp; Validations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Performances.html">Performances</a></li>
 </ul>
@@ -68,7 +73,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a></li>
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Welcome to PeleLMeX’s documentation!</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
@@ -82,7 +87,7 @@
   <section id="welcome-to-pelelmex-s-documentation">
 <h1>Welcome to PeleLMeX’s documentation!<a class="headerlink" href="#welcome-to-pelelmex-s-documentation" title="Permalink to this heading"></a></h1>
 <p><cite>PeleLMeX</cite> is the non-subcycling version of <a class="reference external" href="https://amrex-combustion.github.io/PeleLM/">PeleLM</a>, an adaptive-mesh low Mach number hydrodynamics
-code for reacting flows. If you need help or have questions, please join the users <a class="reference external" href="https://groups.google.com/forum/#!forum/pelelmusers">forum</a>.
+code for reacting flows. If you need help or have questions, please use the <a class="reference external" href="https://github.com/AMReX-Combustion/PeleLMeX/discussions">GitHub discussion</a>.
 The documentation pages appearing here are distributed with the code in the <code class="docutils literal notranslate"><span class="pre">Docs</span></code> folder as “restructured text” files.  The html is built
 automatically with certain pushes to the <cite>PeleLMeX</cite> GibHub repository. A local version can also be built as follows</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ${PELELMEX_HOME}/Docs
@@ -100,13 +105,23 @@ point your web browser at the file <code class="docutils literal notranslate"><s
 <li class="toctree-l2"><a class="reference internal" href="Model.html#pelelmex-algorithm">PeleLMeX Algorithm</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Implementation.html">Source code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Implementation.html#overview-of-source-code">Overview of source code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Implementation.html#data-structure-and-containers">Data structure and containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Implementation.html#parallelism">Parallelism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Implementation.html#debugging">Debugging</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Validation.html">PeleLMeX Verification &amp; Validations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Validation.html#laminar-premixed-flame">Laminar premixed flame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Validation.html#laminar-poiseuille-flow">Laminar Poiseuille flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Validation.html#taylor-green-vortex-breakdown">Taylor-Green vortex breakdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Validation.html#channel-flow-using-eb">Channel Flow using EB</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Performances.html">Performances</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Performances.html#single-node-performances-flamesheet-case">Single node performances: FlameSheet case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Performances.html#weak-scaling-performances-flamesheet-case">Weak scaling performances: FlameSheet case</a></li>
 </ul>
 </li>
 </ul>
@@ -116,14 +131,18 @@ point your web browser at the file <code class="docutils literal notranslate"><s
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="LMeXControls.html">PeleLMeX controls</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#computational-domain-definition">Computational domain definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#amr-parameters">AMR parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#grid-amr-parameters">Grid/AMR parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#load-balancing">Load balancing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#time-stepping-parameters">Time stepping parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#io-parameters">IO parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#refinement-controls">Refinement controls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#pelelmex-derived-variables">PeleLMeX derived variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#pelelmex-algorithm">PeleLMeX algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#transport-coeffs-and-les">Transport coeffs and LES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#chemistry-integrator">Chemistry integrator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#embedded-geometry">Embedded Geometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#linear-solvers">Linear solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#active-control">Active control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#run-time-diagnostics">Run-time diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LMeXControls.html#run-time-control">Run-time control</a></li>
 </ul>
@@ -138,7 +157,11 @@ point your web browser at the file <code class="docutils literal notranslate"><s
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Tutorials</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials_FlameSheet.html">Premixed flame sheet with harmonic perturbations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials_FlowPastCyl.html">Non-reacting flow past a cylinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials_BFSFlame.html">Backward facing step anchored premixed flame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials_TripleFlame.html">A simple triple flame</a></li>
 </ul>
 </li>
 </ul>
